@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Créolab Web</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/fonts.css">
 </head>
 <body>
     <canvas id="shaderCanvas"></canvas>
@@ -16,24 +20,133 @@
 <!-- /* |||||||||||||||||||||||||||-----section 1-------||||||||||||||||||||||||||||||||||| */ -->
 <!-- /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */ -->
 <!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
-    <nav>
-        <div class="logo">
-            <!-- Insérer ici le logo Creolab -->
-            <img src="logo/creolab.png" alt="Logo Créolab" />
-        </div>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <ul class="menu">
-            <li><a href="#Accueil">Accueil</a></li>
-            <li><a href="#propos">À propos</a></li>
-            <li><a href="#services">Nos services</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav>
+    <div class="logo">
+        <img src="logo/creolab.png" alt="Logo Créolab" width="100" height="550" />
+    </div>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="menu">
+        <li><a href="#Accueil">Accueil</a></li>
+        <li><a href="#propos">À propos</a></li>
+        <li><a href="#services">Nos services</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </ul>
+</nav>
+
+<style>
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #FFC811;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 20px 0;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu li {
+        margin: 16px 0;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        menu.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.menu li a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            menu.classList.remove('active');
+        });
+    });
+});
+</script>
+
 
     
 
@@ -51,7 +164,7 @@
         <div class="person1"> 
             <!-- Photo de la première personne -->
             <img class="img1" src="fondateur/aziz2.png" alt="aziz" style="width: 350px; height: auto; margin-left: 150px; filter: drop-shadow(0 10px 15px rgba(255, 200, 17, 0.4));" />
-            <a href="https://creolab.rf.gd/?i=1" target="_blank" style="margin-left: 180px;"><button>DÉCOUVRIR</button></a>
+            <a href="https://creolab.rf.gd/?i=1" target="_blank" style="margin-left: 180px ; "><button>DÉCOUVRIR</button></a>
         </div>
 
         <div class="person2">
@@ -69,7 +182,7 @@
 <!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
 
 <section class="presentation" id="propos">
-<h2 class="section-title" data-text="Bienvenue chez Créolab-Web">Bienvenue chez <span>Créolab-Web</span></h2>
+<h2 class="section-title" data-text="Bienvenue chez Créolab-Web" style="font-family: 'HigherJump', system-ui; font-size: 15px; ">Bienvenue chez <span>Créolab-Web</span></h2>
     <div class="presentation-container">
         <div class="col-6 description" >
             <p >Créolab est une agence créative spécialisée dans le développement web et le design numérique. Notre équipe passionnée combine expertise technique et créativité pour donner vie à vos projets digitaux.</p>
@@ -87,13 +200,13 @@
 <!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
 
 <section class="presentation" id="services">
-    <h2 class="section-title" data-text="Bienvenue chez Créolab-Web">Nos  <span>services</span></h2>
+    <h2 class="section-title" data-text="Bienvenue chez Créolab-Web"  style="font-family: 'HigherJump', system-ui; font-size: 15px; ">Nos  <span>services</span></h2>
     <div class="card">
-        <p><img src="logo/a.png" alt="UI/UX Design Icon" class="service-icon">UI/UX Design</p>
-        <p><img src="logo/a.png" alt="UI/UX Design Icon" class="service-icon">UI/UX Design</p>
-        <p><img src="logo/a.png" alt="UI/UX Design Icon" class="service-icon">UI/UX Design</p>
-        <p><img src="logo/a.png" alt="UI/UX Design Icon" class="service-icon fixed-icon">UI/UX Design</p>
-        <p><img src="logo/a.png" alt="UI/UX Design Icon" class="service-icon">UI/UX Design</p>
+        <p><img src="picsProjet/2.png" alt="UI/UX Design Icon" class="service-icon">UI/UX Design</p>
+        <p><img src="picsProjet/10.png" alt="UI/UX Design Icon" class="service-icon">UI/UX Design</p>
+        <p><img src="picsProjet/14.png" alt="UI/UX Design Icon" class="service-icon">UI/UX Design</p>
+        <p><img src="picsProjet/16.png" alt="UI/UX Design Icon" class="service-icon fixed-icon">UI/UX Design</p>
+        <p><img src="picsProjet/3.png" alt="UI/UX Design Icon" class="service-icon">UI/UX Design</p>
     </div>
    
     </section>
@@ -104,12 +217,24 @@
 <!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
 
 <section class="presentation" id="Projects" >
-    <h2 class="section-title" data-text="Bienvenue chez Créolab-Web">Nos projets notre   <span>signature</span></h2>
-    
-
+    <h2 class="section-title" data-text="Bienvenue chez Créolab-Web"  style="font-family: 'HigherJump', system-ui; font-size: 15px; ">Nos projets notre   <span>signature</span></h2>
+<div class="project-container">
+    <iframe src="project.html" 
+            title="Nos Projets" 
+            width="1400px" 
+            height="800px" 
+            frameborder="0"
+            loading="lazy"
+            required>
+    </iframe>
+</div>
 </section>
 
-
+<!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* |||||||||||||||||||||||||||-----section 5-------||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
 
 
 

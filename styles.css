@@ -464,6 +464,33 @@ span {
 /* be7ale dik require f php deyrt liha iframe  li raha hia require f php   */
 
 
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--c2), var(--c3));
+  border-radius: 100px;
+  border: 8px solid #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--c3), var(--c2));
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--c2) #000000;
+}
+
+
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */
 /* |||||||||||||||||||||||||||-----contact-------||||||||||||||||||||||||||||||||||| */
@@ -471,7 +498,7 @@ span {
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
 .contact-section{
-  height: 100vh;
+  height: 80vh;
 }
 .contact-title {
   text-align: center;
@@ -485,7 +512,7 @@ span {
   content: "";
   width: 60px;
   height: 3px;
-  background: #ffd700;
+  background: rgba(255, 200, 17, 0.5);;
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -516,7 +543,7 @@ gap: 50px;
 
 .input-group label {
   margin-bottom: 5px;
-  color: #ffd700;
+  color:  rgba(255, 200, 17, 0.5);;
   font-weight: 500;
 }
 .text{
@@ -574,6 +601,11 @@ gap: 50px;
 /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
+
+.location{
+margin-bottom: 120px;
+
+}
 .footer-container {
   display: flex;
   justify-content: center;
@@ -702,4 +734,76 @@ gap: 50px;
 
 .contact-info {
   animation-delay: 0.2s;
+}
+
+
+
+<!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* |||||||||||||||||||||||||||-----  revies  -------|||||||||||||||||||||||||||||||||| */ -->
+<!-- /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
+
+
+
+.testimonial__container .section__header {
+  text-align: center;
+}
+
+.swiper {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.testimonial__card {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.testimonial__card p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+#cursor-balls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+
+
+.testimonial__card img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 200, 17, 0.3);
+  padding: 5px;
+  background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
+  box-shadow: 
+    0 0 15px rgba(255, 200, 17, 0.3),
+    inset 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial__card img:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 25px rgba(255, 200, 17, 0.5),
+    inset 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.testimonial__card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
 }

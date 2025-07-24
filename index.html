@@ -9,10 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./fonts/fonts.css">
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logo/creolab22.png">
+    
 </head>
 <body>
     <canvas id="shaderCanvas"></canvas>
@@ -38,6 +37,7 @@
         <li><a href="#propos">À propos</a></li>
         <li><a href="#services">Nos services</a></li>
         <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Temoignages">Témoignages</a></li>
         <li><a href="#Contact">Contact</a></li>
     </ul>
 </nav>
@@ -233,33 +233,63 @@ document.addEventListener('DOMContentLoaded', () => {
     </iframe>
 </div>
 </section>
+<!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* |||||||||||||||||||||||||||-----  revies  -------|||||||||||||||||||||||||||||||||| */ -->
+<!-- /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
+
+
+<section class="section__container testimonial__container" id="Temoignages">
+    <h2 class="section-title" data-text="Bienvenue chez Créolab-Web" style="font-family: 'HigherJump', system-ui; font-size: 15px;">Ce que disent <span>les clients</span></h2>
+    <div class="project-container">
+        <iframe src="rewies.html" 
+                title="Nos Projets" 
+                width="1400px" 
+                height="800px" 
+                frameborder="0"
+                loading="lazy"
+                required>
+        </iframe>
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+
+
 
 <!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
 <!-- /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */ -->
-<!-- /* |||||||||||||||||||||||||||-----  Contact  -------||||||||||||||||||||||||||||||||||| */ -->
+<!-- /* |||||||||||||||||||||||||||-----  Contact  -------||||||||||||||||||||||||||||||||| */ -->
 <!-- /* |||||||||||||||||||||||||||---------------------||||||||||||||||||||||||||||||||||| */ -->
 <!-- /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ -->
 
 <section class="contact-section" id="Contact">
-  <h2 class="contact-title">Contact Us</h2>
+  <h2 class="contact-title" style="font-family: 'HigherJump', system-ui; font-size: 15px; "><span>Contact</span> Us</h2>
   <div class="contact-container">
     <form class="contact-form">
       <div class="input-row">
         <div class="input-group">
-          <label>Firstname:</label>
+          <label style="color: rgba(255, 200, 17, 0.5);">Firstname:</label>
           <input type="text" placeholder="Your name ..." />
         </div>
         <div class="input-group">
-          <label>Lastname:</label>
+          <label style="color: rgba(255, 200, 17, 0.5);">Lastname:</label>
           <input type="text" placeholder="Your last name ..." />
         </div>
       </div>
       <div class="input-group full-width">
-        <label>Email Address:</label>
+        <label style="color: rgba(255, 200, 17, 0.5);">Email Address:</label>
         <input type="email" placeholder="Your email address ..." />
       </div>
       <div class="input-group full-width">
-        <label>Your Message:</label>
+        <label style="color: rgba(255, 200, 17, 0.5);">Your Message:</label>
         <textarea placeholder="Your message ..."></textarea>
       </div>
     </form>
@@ -267,19 +297,23 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="contact-info">
       <div class="contact-item">
         <i class="icon fab fa-whatsapp"></i>
-        <span  class="text">Whatsapp<br />+212 06 06 06 06 06</span>
+        <span  class="text">Whatsapp<br />+212 777-996998</span><br>
+        <span  class="text"><br />+212 604-804145</span>
       </div>
       <div class="contact-item">
         <i class="icon fab fa-instagram"></i>
-        <span class="text">Instagram<br />+212 06 06 06 06 06</span>
+        <span class="text">Instagram<br />@creolabweb</span>
+        <span class="text"><br />@creolab-web</span>
       </div>
       <div class="contact-item">
         <i class="icon fab fa-linkedin"></i>
-        <span class="text">Linkedin<br />+212 06 06 06 06 06</span>
+        <span class="text">Linkedin<br />Abdelaziz Aabbour</span>
+        <span class="text"><br />Wiam Aarika</span>
       </div>
       <div class="contact-item">
         <i class="icon fas fa-envelope"></i>
-        <span class="text">Email<br />+212 06 06 06 06 06</span>
+        <span class="text">Email<br />azizabour77@gmail.com</span>
+        <span class="text"><br />aarikawieam@gmail.com </span>
       </div>
     </div>
   </div>
@@ -339,9 +373,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="footer-section">
         <h3>Follow me</h3>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/wiam-aarika-a2977432b/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/wiam-aarika-a2977432b/" class="social-icon" style="color: wheat;"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/wieam-ar" class="social-icon"> <i class="fab fa-github" style="color: wheat;"></i></a>
-            <a href="+2120604804145" class="social-icon"><i class="fas fa-phone-alt"></i></a>
+            <a href="+212 777-996998" class="social-icon"><i class="fas fa-phone-alt" style="color: wheat;"></i></a>
         </div>
         </div>
      </div>
